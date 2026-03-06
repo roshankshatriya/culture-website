@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sanskriti — Celebrating the timeless beauty of Indian Classical Arts: Bharatanatyam, Kathak, Carnatic Music, and Cultural Performances." />
+  <title>Sanskriti — Home | Indian Classical Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="nav-logo-img" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="dance.html" class="nav-link">Dance</a></li>
+        <li><a href="music.html" class="nav-link">Music</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="heroParticles"></div>
+    
+    <div class="hero-carousel" id="heroCarousel">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <div class="slide-bg" style="background-image: url('images/home/carousel-1.jpg');"></div>
+        <div class="hero-content">
+          <span class="hero-badge">✦ Divine Rhythms ✦</span>
+          <h1 class="hero-title">
+            <em>Eternal Dance</em> of<br />
+            Sacred Traditions
+          </h1>
+          <p class="hero-subtitle">Experience the rhythmic soul and visual brilliance of Indian Classical Dance.</p>
+          <div class="hero-buttons">
+            <a href="dance.html" class="btn btn-primary">Explore Dance <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline">Join Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="slide-bg" style="background-image: url('images/home/carousel-2.jpg');"></div>
+        <div class="hero-content">
+          <span class="hero-badge">✦ Melodic Soul ✦</span>
+          <h1 class="hero-title">
+            Resonance of<br />
+            <em>Divine Strings</em>
+          </h1>
+          <p class="hero-subtitle">Discover the melodic heart of India through the strings of thousand-year-old music.</p>
+          <div class="hero-buttons">
+            <a href="music.html" class="btn btn-primary">Discover Music <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <div class="slide-bg" style="background-image: url('images/home/carousel-3.jpg');"></div>
+        <div class="hero-content">
+          <span class="hero-badge">✦ Artistic Legacy ✦</span>
+          <h1 class="hero-title">
+            Celebrating our<br />
+            <em>Living Heritage</em>
+          </h1>
+          <p class="hero-subtitle">A sanctuary for Indian classical arts, where tradition meets timeless elegance.</p>
+          <div class="hero-buttons">
+            <a href="gallery.html" class="btn btn-primary">View Gallery <i class="fas fa-arrow-right"></i></a>
+            <a href="events.html" class="btn btn-outline">Attend Events</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fixed Stats Over Carousel -->
+      <div class="hero-fixed-bottom">
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Years of Legacy</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Performances</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">1200+</span><span class="stat-label">Students Trained</span></div>
+        </div>
+      </div>
+
+      <!-- Carousel Progress Navigation -->
+      <div class="carousel-controls">
+        <div class="nav-dot active" data-slide="0"></div>
+        <div class="nav-dot" data-slide="1"></div>
+        <div class="nav-dot" data-slide="2"></div>
+      </div>
+      
+      <!-- Artistic Light & Interaction Overlays -->
+      <div class="hero-light-overlay"></div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION DIVIDER ===== -->
+  <div class="divider divider-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-primary)" />
+    </svg>
+  </div>
+
+  <!-- ===== HOME ABOUT SECTION ===== -->
+  <section class="home-about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap" data-aos="fade-right">
+          <div class="about-img-frame">
+            <img src="images/home/home-about.jpg" alt="Guru teaching Shishya" />
+            <div class="img-badge">Est. 2001</div>
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <span class="section-tag">Our Legacy</span>
+          <h2 class="section-title">Preserving the <br><em>Sacred Art</em> of India</h2>
+          <p>For over two decades, Sanskriti has been a sanctuary for those seeking to immerse themselves in the profound beauty of Indian classical arts. Our journey began with a simple mission: to nurture the next generation of artists through the time-honored Guru-Shishya tradition.</p>
+          <p>We believe that dance and music are more than just performance; they are a spiritual journey and a living heritage that connects us to our roots.</p>
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+              <div>
+                <h4>Certified Excellence</h4>
+                <p>Curriculum recognized by leading cultural boards across India.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-heart"></i></div>
+              <div>
+                <h4>Holistic Growth</h4>
+                <p>Focusing on discipline, spirituality, and artistic mastery.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-btns" style="justify-content: flex-start;">
+            <a href="about.html" class="btn btn-primary">Our Full Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Voices of Sanskriti</span>
+        <h2 class="section-title">What Our <em>Students Say</em></h2>
+        <p class="section-desc">Real stories from the hearts of those who have journeyed with us through the world of classical arts.</p>
+      </div>
+      <div class="testimonial-carousel-container">
+        <div class="testimonial-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testi-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"Learning Bharatanatyam at Sanskriti has been a transformative experience. It's not just about the steps; it's about finding my inner rhythm and discipline."</p>
+            </div>
+            <div class="testi-user">
+              <img src="images/home/student-1.jpg" alt="Priya Sharma" />
+              <div class="user-info">
+                <h5>Priya Sharma</h5>
+                <span>Advanced Student</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testi-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"The spiritual depth of Sitar music I discovered here is life-changing. The Gurus are incredibly patient and inspiring mentors."</p>
+            </div>
+            <div class="testi-user">
+              <img src="images/home/student-2.jpg" alt="Arjun Mehta" />
+              <div class="user-info">
+                <h5>Arjun Mehta</h5>
+                <span>Music Enthusiast</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testi-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"Sanskriti feels like family. The support during my Arangetram was overwhelming, and I've grown so much as an artist and a person."</p>
+            </div>
+            <div class="testi-user">
+              <img src="images/home/student-3.jpg" alt="Ananya Das" />
+              <div class="user-info">
+                <h5>Ananya Das</h5>
+                <span>Performed Graduate</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testi-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"The Kathak classes here are exceptional. Every mudra and step is taught with such precision and love for the heritage."</p>
+            </div>
+            <div class="testi-user">
+              <img src="images/home/student-4.jpg" alt="Meera Iyer" />
+              <div class="user-info">
+                <h5>Meera Iyer</h5>
+                <span>Kathak Scholar</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testi-content">
+              <i class="fas fa-quote-left"></i>
+              <p>"Discovering the nuances of Carnatic music at Sanskriti has been my soul's calling. A truly divine learning environment."</p>
+            </div>
+            <div class="testi-user">
+              <img src="images/home/student-5.jpg" alt="Rohan Kulkarni" />
+              <div class="user-info">
+                <h5>Rohan Kulkarni</h5>
+                <span>Music Student</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots">
+          <span class="testi-dot active" data-index="0"></span>
+          <span class="testi-dot" data-index="1"></span>
+          <span class="testi-dot" data-index="2"></span>
+          <span class="testi-dot" data-index="3"></span>
+          <span class="testi-dot" data-index="4"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== QUICK NAV TILES ===== -->
+  <section class="quick-nav-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Explore Sanskriti</span>
+        <h2 class="section-title">Dive Into Our <em>World of Art</em></h2>
+        <p class="section-desc">Navigate through our curated pages — each telling a unique story of India's classical heritage.</p>
+      </div>
+      <div class="quick-nav-grid">
+        <a href="about.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="qn-icon"><i class="fas fa-om"></i></div>
+          <h3>About Us</h3>
+          <p>Discover the story, mission, and legacy of Sanskriti Academy — 25 years of nurturing classical arts.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="dance.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="qn-icon"><i class="fas fa-shoe-prints"></i></div>
+          <h3>Classical Dance</h3>
+          <p>Explore Bharatanatyam, Kathak, Kuchipudi — ancient dance forms alive with rhythm and expression.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="music.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="qn-icon"><i class="fas fa-music"></i></div>
+          <h3>Classical Music</h3>
+          <p>Journey through Carnatic, Hindustani, and Devotional traditions — melodies that touch the divine.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="gallery.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="qn-icon"><i class="fas fa-images"></i></div>
+          <h3>Gallery</h3>
+          <p>A visual celebration — stunning photographs from our performances, workshops, and festivals.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="events.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="qn-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Events</h3>
+          <p>Upcoming performances, arangetrams, workshops, and grand festivals — be a part of the tradition.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="contact.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="qn-icon"><i class="fas fa-envelope-open-text"></i></div>
+          <h3>Contact Us</h3>
+          <p>Enroll in a program, book a performance, or enquire about our academy. We'd love to hear from you.</p>
+          <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE BANNER ===== -->
+  <section class="quote-banner">
+    <div class="quote-overlay"></div>
+    <div class="container">
+      <blockquote data-aos="fade-up">
+        <i class="fas fa-quote-left"></i>
+        <p>"Nritye Sthite Jagan Madhye, Param Brahma Prakashate"</p>
+        <p class="quote-translation">In the presence of dance, the Supreme Brahman radiates throughout the universe.</p>
+        <cite>— Natya Shastra</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="footer-logo-img" />
+          </a>
+          <p>Preserving the ancient. Inspiring the future. Sanskriti is India's premier classical arts institution
+            dedicated to Bharatanatyam, Carnatic Music, and cultural heritage.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="dance.html">Dance Forms</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="contact.html">Bharatanatyam</a></li>
+            <li><a href="contact.html">Kathak</a></li>
+            <li><a href="contact.html">Kuchipudi</a></li>
+            <li><a href="contact.html">Carnatic Vocal</a></li>
+            <li><a href="contact.html">Hindustani Music</a></li>
+            <li><a href="contact.html">Arangetram</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 12, Nrityagram Lane, Koramangala, Bangalore — 560 034</p>
+          <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@sanskriti-arts.in</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Sanskriti Classical Arts Academy. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

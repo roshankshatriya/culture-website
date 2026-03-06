@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Classical Dance at Sanskriti — Explore Bharatanatyam, Kathak, and Kuchipudi. Ancient dance forms alive with rhythm, expression, and devotion." />
+  <title>Classical Dance — Sanskriti | Indian Classical Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="nav-logo-img" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="dance.html" class="nav-link active">Dance</a></li>
+        <li><a href="music.html" class="nav-link">Music</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background: radial-gradient(ellipse at 30% 50%, rgba(123,26,51,0.6) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(212,168,67,0.3) 0%, transparent 60%), var(--bg-primary);"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <span class="section-tag">Classical Dance</span>
+      <h1 class="page-hero-title">Movements that<br /><em>Tell Stories</em></h1>
+      <p class="page-hero-desc">Explore the grandeur of India's classical dance traditions — each a universe of rhythm, grace, and spiritual devotion.</p>
+    </div>
+  </section>
+
+  <!-- ===== DANCE CARDS ===== -->
+  <section class="dance-section section">
+    <div class="container">
+      <div class="cards-grid" id="danceCards">
+
+        <div class="art-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1620913588695-f1a5e1778d88?w=600&q=80" alt="Bharatanatyam"
+              loading="lazy" />
+            <div class="card-overlay">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-badge">South India</div>
+          </div>
+          <div class="card-body">
+            <h3>Bharatanatyam</h3>
+            <p>One of India's oldest classical dance forms originating from Tamil Nadu temple traditions. Known for its
+              fixed upper torso, bent legs, and intricate footwork, it weaves rhythm, expression, and devotion.</p>
+            <div class="card-tags"><span>Nritta</span><span>Nritya</span><span>Natya</span></div>
+            <a href="#bharatanatyam-detail" class="btn btn-outline-sm learn-more-btn" data-modal="bharatanatyam">Learn More <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="art-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1535401991746-da3d9055713e?w=600&q=80" alt="Kathak"
+              loading="lazy" />
+            <div class="card-overlay">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-badge">North India</div>
+          </div>
+          <div class="card-body">
+            <h3>Kathak</h3>
+            <p>Born in the royal courts of North India, Kathak is characterized by fast pirouettes (chakkar), expressive
+              storytelling (abhinaya), and complex rhythmic footwork. It bridges Hindu and Mughal artistic traditions.
+            </p>
+            <div class="card-tags"><span>Thumri</span><span>Chakkar</span><span>Abhinaya</span></div>
+            <a href="#kathak-detail" class="btn btn-outline-sm learn-more-btn" data-modal="kathak">Learn More <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="art-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1606593038580-1ad3f0f5f44a?w=600&q=80" alt="Kuchipudi"
+              loading="lazy" />
+            <div class="card-overlay">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="card-badge">Andhra Pradesh</div>
+          </div>
+          <div class="card-body">
+            <h3>Kuchipudi</h3>
+            <p>Originating from the Krishna district of Andhra Pradesh, Kuchipudi blends dance and drama. Famous for its
+              Tarangam — dancing on the rim of a brass plate — it showcases agility and spiritual expression.</p>
+            <div class="card-tags"><span>Tarangam</span><span>Yakshagana</span><span>Sabdam</span></div>
+            <a href="#kuchipudi-detail" class="btn btn-outline-sm learn-more-btn" data-modal="kuchipudi">Learn More <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE SECTIONS ===== -->
+  <section class="section" style="background:var(--bg-secondary); padding: 80px 0;" id="bharatanatyam-detail">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Deep Dive</span>
+        <h2 class="section-title">Understanding <em>Bharatanatyam</em></h2>
+      </div>
+      <div class="dance-detail-grid">
+        <div class="dance-detail-text" data-aos="fade-right">
+          <p>Bharatanatyam is one of the major forms of Indian classical dance originating in Tamil Nadu. Tracing its lineage over 2,000 years, it is rooted in the Natya Shastra and was historically performed as a form of temple worship.</p>
+          <p>The art form integrates three core elements: <strong>Nritta</strong> (pure rhythmic movement), <strong>Nritya</strong> (expressive dance conveying emotions), and <strong>Natya</strong> (dramatic narrative).</p>
+          <p>Dancers undergo years of training in adavus (footwork patterns), mudras (hand gestures), and abhinaya (facial expressions) to master this sacred art form.</p>
+          <div class="detail-tags">
+            <span><i class="fas fa-map-marker-alt"></i> Tamil Nadu</span>
+            <span><i class="fas fa-book"></i> Natya Shastra</span>
+            <span><i class="fas fa-history"></i> 2000+ Years</span>
+          </div>
+        </div>
+        <div class="dance-detail-img" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1662399006-1d3ec6e2e23d?w=600&q=80" alt="Bharatanatyam" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament-divider">
+    <span></span><i class="fas fa-dharmachakra"></i><span></span>
+  </div>
+
+  <section class="section" style="padding-top:0;" id="kathak-detail">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Deep Dive</span>
+        <h2 class="section-title">Understanding <em>Kathak</em></h2>
+      </div>
+      <div class="dance-detail-grid reverse">
+        <div class="dance-detail-img" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1535401991746-da3d9055713e?w=600&q=80" alt="Kathak" loading="lazy" />
+        </div>
+        <div class="dance-detail-text" data-aos="fade-left">
+          <p>Kathak is one of the eight major forms of Indian classical dance. Originating from the storytelling bards of North India, Kathak is characterized by lightning-fast footwork, graceful spins (chakkar), and vivid storytelling through movement.</p>
+          <p>It evolved under both Hindu and Muslim patronage, developing distinct styles across three main gharanas: <strong>Lucknow</strong> (grace and emotion), <strong>Jaipur</strong> (powerful technique), and <strong>Benares</strong> (devotional fervour).</p>
+          <p>Kathak uniquely blends Hindu religious narratives with Mughal court elegance, making it a bridge between two great artistic traditions of India.</p>
+          <div class="detail-tags">
+            <span><i class="fas fa-map-marker-alt"></i> North India</span>
+            <span><i class="fas fa-landmark"></i> Mughal Courts</span>
+            <span><i class="fas fa-music"></i> Three Gharanas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-secondary); padding: 80px 0;" id="kuchipudi-detail">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Deep Dive</span>
+        <h2 class="section-title">Understanding <em>Kuchipudi</em></h2>
+      </div>
+      <div class="dance-detail-grid">
+        <div class="dance-detail-text" data-aos="fade-right">
+          <p>Kuchipudi is a classical dance form that originated in Kuchipudi village of Krishna district, Andhra Pradesh. Traditionally performed by Brahmin men in traveling troupes, it blends dance and drama to portray stories from Hindu epics.</p>
+          <p>Its most celebrated element is the <strong>Tarangam</strong> — in which the dancer performs intricate movements while balancing a water pot on the head and dancing on the narrow rim of a brass plate.</p>
+          <p>Kuchipudi is known for its graceful hand gestures, expressive eye movements, rhythmic footwork, and theatrical elements that transform a stage into a divine narrative.</p>
+          <div class="detail-tags">
+            <span><i class="fas fa-map-marker-alt"></i> Andhra Pradesh</span>
+            <span><i class="fas fa-theater-masks"></i> Dance Drama</span>
+            <span><i class="fas fa-star"></i> Tarangam</span>
+          </div>
+        </div>
+        <div class="dance-detail-img" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1606593038580-1ad3f0f5f44a?w=600&q=80" alt="Kuchipudi" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENROLL CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container" data-aos="fade-up">
+      <h2>Begin Your <em>Dance Journey</em></h2>
+      <p>Enroll in one of our classical dance programs under the guidance of Guru-lineage trained masters.</p>
+      <a href="contact.html" class="btn btn-primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== LEARN MORE MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="learnMoreModal">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="footer-logo-img" />
+          </a>
+          <p>Preserving the ancient. Inspiring the future. India's premier classical arts institution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="dance.html">Dance Forms</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="contact.html">Bharatanatyam</a></li>
+            <li><a href="contact.html">Kathak</a></li>
+            <li><a href="contact.html">Kuchipudi</a></li>
+            <li><a href="contact.html">Carnatic Vocal</a></li>
+            <li><a href="contact.html">Hindustani Music</a></li>
+            <li><a href="contact.html">Arangetram</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 12, Nrityagram Lane, Koramangala, Bangalore — 560 034</p>
+          <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@sanskriti-arts.in</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Sanskriti Classical Arts Academy. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

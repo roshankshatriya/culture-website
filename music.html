@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Classical Music at Sanskriti — Discover Carnatic, Hindustani, and Devotional music traditions. Melodies that carry centuries of wisdom." />
+  <title>Classical Music — Sanskriti | Indian Classical Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="nav-logo-img" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="dance.html" class="nav-link">Dance</a></li>
+        <li><a href="music.html" class="nav-link active">Music</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background: radial-gradient(ellipse at 30% 50%, rgba(26,139,127,0.4) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(27,58,107,0.5) 0%, transparent 60%), var(--bg-primary);"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <span class="section-tag">Classical Music</span>
+      <h1 class="page-hero-title">Melodies of the <em>Divine</em></h1>
+      <p class="page-hero-desc">Discover the profound traditions of Indian classical music — systems of ragas and talas that carry centuries of wisdom and spiritual depth.</p>
+    </div>
+  </section>
+
+  <!-- ===== MUSIC CARDS ===== -->
+  <section class="music-section section">
+    <div class="music-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Our Traditions</span>
+        <h2 class="section-title">Three Sacred <em>Streams</em></h2>
+        <p class="section-desc">Each tradition a universe of its own — rooted in the same soil, yet flowering differently.</p>
+      </div>
+      <div class="music-cards">
+
+        <div class="music-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="music-card-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <div class="music-card-glow"></div>
+          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&q=80" alt="Carnatic Music"
+            loading="lazy" />
+          <div class="music-card-content">
+            <h3>Carnatic Music</h3>
+            <p>The devotional classical music tradition of South India with roots in ancient Hindu scriptures. Built
+              around 72 Melakarta ragas, it celebrates raga and tala with compositions called Kritis.</p>
+            <div class="music-waveform">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="music-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="music-card-icon">
+            <i class="fas fa-drum"></i>
+          </div>
+          <div class="music-card-glow"></div>
+          <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=500&q=80" alt="Hindustani Music"
+            loading="lazy" />
+          <div class="music-card-content">
+            <h3>Hindustani Music</h3>
+            <p>North India's classical tradition shaped by Persian and Islamic influences. Known for its improvisational
+              nature through alap, jor, and jhala, using khayal, dhrupad, and thumri forms.</p>
+            <div class="music-waveform">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="music-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="music-card-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <div class="music-card-glow"></div>
+          <img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=500&q=80" alt="Devotional Singing"
+            loading="lazy" />
+          <div class="music-card-content">
+            <h3>Devotional Singing</h3>
+            <p>Sacred kirtan, bhajan, and Sufi music that transcend religious boundaries. These soulful expressions
+              connect the mortal to the divine through a universal language of love and devotion.</p>
+            <div class="music-waveform">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP DIVE: CARNATIC ===== -->
+  <section class="section" style="padding-top: 80px;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">South Indian Classical</span>
+        <h2 class="section-title">The World of <em>Carnatic Music</em></h2>
+      </div>
+      <div class="dance-detail-grid">
+        <div class="dance-detail-text" data-aos="fade-right">
+          <p>Carnatic music is one of the two main sub-genres of Indian classical music, developed mostly in the southern states. It is primarily devotional in nature, with the majority of compositions written in praise of Hindu deities.</p>
+          <p>The structure of Carnatic music is built on <strong>Ragas</strong> (melodic scales) and <strong>Talas</strong> (rhythmic cycles). The 72 Melakarta raga system, classified by Venkatamakhin in the 17th century, forms the foundation of the tradition.</p>
+          <p>Key composers like Thyagaraja, Muthuswami Dikshitar, and Syama Sastri — collectively called the Trinity of Carnatic Music — created thousands of compositions that remain central to the repertoire today.</p>
+          <div class="detail-tags">
+            <span><i class="fas fa-music"></i> 72 Melakartas</span>
+            <span><i class="fas fa-users"></i> Musical Trinity</span>
+            <span><i class="fas fa-map-marker-alt"></i> South India</span>
+          </div>
+        </div>
+        <div class="dance-detail-img" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80" alt="Carnatic Music" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="ornament-divider">
+    <span></span><i class="fas fa-dharmachakra"></i><span></span>
+  </div>
+
+  <!-- ===== DEEP DIVE: HINDUSTANI ===== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">North Indian Classical</span>
+        <h2 class="section-title">The Universe of <em>Hindustani Music</em></h2>
+      </div>
+      <div class="dance-detail-grid reverse">
+        <div class="dance-detail-img" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&q=80" alt="Hindustani Music" loading="lazy" />
+        </div>
+        <div class="dance-detail-text" data-aos="fade-left">
+          <p>Hindustani classical music, the music of North India, evolved from Vedic traditions and was deeply influenced by Persian and Mughal court culture from the 13th century onward. This fusion gave birth to a uniquely expressive art form.</p>
+          <p>At the core of Hindustani music are <strong>Ragas</strong> — melodic frameworks with specific ascending and descending scale patterns, characteristic phrases, and emotional moods. Each raga is associated with a particular time of day or season.</p>
+          <p>Major forms include <strong>Dhrupad</strong> (the oldest), <strong>Khayal</strong> (most widely practiced today), <strong>Thumri</strong> (semi-classical and romantic), and <strong>Ghazal</strong> (poetic and lyrical).</p>
+          <div class="detail-tags">
+            <span><i class="fas fa-landmark"></i> Mughal Courts</span>
+            <span><i class="fas fa-book"></i> Raga & Tala</span>
+            <span><i class="fas fa-map-marker-alt"></i> North India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTRUMENTS ===== -->
+  <section class="section" style="background:var(--bg-secondary); padding: 80px 0;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Instruments</span>
+        <h2 class="section-title">Sacred <em>Instruments</em></h2>
+        <p class="section-desc">The divine voices of India — instruments that have carried ragas and talas across centuries.</p>
+      </div>
+      <div class="instruments-grid">
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="inst-icon"><i class="fas fa-guitar"></i></div>
+          <h4>Veena</h4>
+          <p>The mother of all string instruments, associated with Goddess Saraswati. Central to Carnatic music with its rich, resonant tonal quality.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="inst-icon"><i class="fas fa-drum"></i></div>
+          <h4>Mridangam</h4>
+          <p>The primary percussion instrument in Carnatic music, with roots going back over 2,000 years to ancient temple traditions.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="inst-icon"><i class="fas fa-wind"></i></div>
+          <h4>Bansuri</h4>
+          <p>The bamboo flute, eternally associated with Lord Krishna. Its haunting, breathy tone carries both earthly longing and spiritual transcendence.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="inst-icon"><i class="fas fa-music"></i></div>
+          <h4>Sitar</h4>
+          <p>The iconic plucked string instrument of Hindustani music, with 20 strings and intricate sympathetic resonators that produce a shimmering sound.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="inst-icon"><i class="fas fa-drum"></i></div>
+          <h4>Tabla</h4>
+          <p>A pair of hand drums central to Hindustani classical music. Its sophisticated bols (syllables) create complex rhythmic tapestries that complement the melody.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="inst-icon"><i class="fas fa-wave-square"></i></div>
+          <h4>Tanpura</h4>
+          <p>The foundational drone instrument providing the tonal basis for both Carnatic and Hindustani performances — the sonic canvas on which ragas are painted.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="inst-icon"><i class="fas fa-violin"></i></div>
+          <h4>Violin</h4>
+          <p>Adopted into Carnatic music in the 18th century, the violin has become an inseparable part of South Indian classical concerts, played in a unique seated posture.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="inst-icon"><i class="fas fa-music"></i></div>
+          <h4>Sarod</h4>
+          <p>A fretless string instrument of Hindustani music descended from the Afghan rabab, known for its deep, weighty tone and intricate note-bending capabilities.</p>
+        </div>
+        <div class="instrument-card" data-aos="fade-up" data-aos-delay="800">
+          <div class="inst-icon"><i class="fas fa-bells"></i></div>
+          <h4>Ghungroo</h4>
+          <p>The ankle bells worn by classical dancers — tied in strings of 50–200 bells, their rhythmic chiming adds a percussive dimension to dance performances.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMS / COURSES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Enroll Today</span>
+        <h2 class="section-title">Our Music <em>Programs</em></h2>
+        <p class="section-desc">Structured curriculum from beginner to advanced level — guided by masters of the tradition.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="program-level beginner">Beginner</div>
+          <h4>Foundation in Carnatic</h4>
+          <p>Sarali varisai, alankarams, and the basic Pancha ratna kritis. Perfect for those with no prior music training.</p>
+          <ul class="program-details">
+            <li><i class="fas fa-clock"></i> 6 months</li>
+            <li><i class="fas fa-calendar"></i> 3 sessions/week</li>
+            <li><i class="fas fa-users"></i> Small batches</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-sm">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="program-level intermediate">Intermediate</div>
+          <h4>Raga Exploration</h4>
+          <p>Varna, kriti, and raga alapana. Students develop improvisational skills and learn key Melakarta ragas.</p>
+          <ul class="program-details">
+            <li><i class="fas fa-clock"></i> 1 year</li>
+            <li><i class="fas fa-calendar"></i> 4 sessions/week</li>
+            <li><i class="fas fa-users"></i> Prior experience needed</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-sm">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="program-level advanced">Advanced</div>
+          <h4>Concert Level Mastery</h4>
+          <p>Ragam-Tanam-Pallavi, Niraval, and Pallavis. Preparation for concert performances and recordings.</p>
+          <ul class="program-details">
+            <li><i class="fas fa-clock"></i> 2 years</li>
+            <li><i class="fas fa-calendar"></i> Daily practice</li>
+            <li><i class="fas fa-users"></i> Guru selection</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-sm">Enquire <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="cta-bg"></div>
+    <div class="container" data-aos="fade-up">
+      <h2>Begin Your <em>Musical Journey</em></h2>
+      <p>Enroll in Carnatic vocal, Hindustani, or devotional music programs — all guided by master musicians.</p>
+      <a href="contact.html" class="btn btn-primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/home/logo.jpeg" alt="Madhurya Manjari" class="footer-logo-img" />
+          </a>
+          <p>Preserving the ancient. Inspiring the future. India's premier classical arts institution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="dance.html">Dance Forms</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="contact.html">Bharatanatyam</a></li>
+            <li><a href="contact.html">Kathak</a></li>
+            <li><a href="contact.html">Kuchipudi</a></li>
+            <li><a href="contact.html">Carnatic Vocal</a></li>
+            <li><a href="contact.html">Hindustani Music</a></li>
+            <li><a href="contact.html">Arangetram</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 12, Nrityagram Lane, Koramangala, Bangalore — 560 034</p>
+          <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@sanskriti-arts.in</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Sanskriti Classical Arts Academy. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

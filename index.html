@@ -20,22 +20,129 @@
 
   <!-- ===== SPLASH SCREEN ===== -->
   <section class="splash-screen">
-    <!-- Video Background (replace src with your actual video path) -->
-    
-    <video autoplay muted loop playsinline class="splash-video-bg" data-testid="video-asset" class="Iq1G_a2IQfN_gIV8VKAw" src="https://media.istockphoto.com/id/1616806621/video/dramatic-performance-done-by-an-indian-girls-practicing-the-art-of-bharatanatyam-in-an.mp4?s=mp4-640x640-is&amp;k=20&amp;c=Mg6ysqiMnZHdSHSuFbkvRb1TZfYEHHJlQwSaVQpP6hM=" aria-label="Dramatic Performance Done by an Indian Girls Practicing the Art of Bharatanatyam in an Ancient Temple. Expressive Young Females in Colourful Traditional Sari Dancing Folk Dance Choreography India Stock Footage Video" controls="" controlslist="nodownload" autoplay="" loop=""></video>
 
-    <!-- Elegant background to keep the classiness -->
-    <div class="splash-bg" style="background-image: url('images/home/carousel-1.jpg');"></div>
-    <div class="splash-dark-overlay"></div>
-    <div class="splash-light-overlay"></div>
-    
-    <div class="splash-content">
-      <img src="images/home/madhurya_manjari_logo.png" alt="Madhurya Manjari" class="splash-logo" />
-      <a href="home.html" class="btn btn-primary splash-btn">Enter Sanskriti <i class="fas fa-arrow-right"></i></a>
+    <!-- Outer gap / decorative border frame -->
+    <div class="splash-frame">
+
+      <!--
+        VIDEO — 1080p full visual, muted (required for browser autoplay policy).
+        The music comes from the separate <audio> element below.
+      -->
+      <video
+        id="splash-video"
+        class="splash-video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="images/home/video for website starting page.mp4" type="video/mp4" />
+      </video>
+
+      <!--
+        AUDIO — aud-majari.mp4 contains the music track.
+        Starts muted; JS unmutes it on the first user gesture (browser policy).
+      -->
+      <audio id="splash-audio" loop preload="auto">
+        <source src="images/home/aud-majari.mp4" type="video/mp4" />
+      </audio>
+
+      <!-- Dark gradient overlay so text/button stay readable -->
+      <div class="splash-dark-overlay"></div>
+
+      <!-- Subtle golden radial glow overlay -->
+      <div class="splash-light-overlay"></div>
+
+      <!-- Content centred on top of video -->
+      <div class="splash-content">
+        <!-- <img src="images/home/madhura-manjari-logo.png" alt="Madhurya Manjari" class="splash-logo" /> -->
+        <h2 class="sanskrit-welcome">सुस्वागतम्</h2>
+        <a href="home.html" class="btn btn-primary splash-btn" id="enterBtn">
+          Welcome &nbsp;<i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div><!-- /.splash-frame -->
+
+    <!-- Mute / Unmute toggle (fixed, bottom-right) -->
+    <button id="muteToggle" class="mute-toggle-btn" aria-label="Toggle sound">
+      <i class="fas fa-volume-mute" id="muteIcon"></i>
+    </button>
+
+    <!-- "Click to enable audio" hint — hides after first interaction -->
+    <div class="audio-hint" id="audioHint">
+      <i class="fas fa-hand-pointer"></i>
+      <span>Click anywhere to enable music</span>
     </div>
+
   </section>
 
-  <!-- <script src="script.js"></script> -->
+  <script>
+    (function () {
+      const video     = document.getElementById('splash-video');
+      const audio     = document.getElementById('splash-audio');
+      const muteBtn   = document.getElementById('muteToggle');
+      const muteIcon  = document.getElementById('muteIcon');
+      const audioHint = document.getElementById('audioHint');
+
+      // --- State ---
+      let musicEnabled = false;
+
+      // --- Start video (muted — always allowed) ---
+      video.play().catch(() => {});
+
+      // --- On first user gesture anywhere: start music ---
+      function enableMusic() {
+        if (musicEnabled) return;
+        musicEnabled = true;
+
+        audio.muted  = false;
+        audio.volume = 0.75;
+
+        audio.play().then(() => {
+          muteIcon.className = 'fas fa-volume-up';
+        }).catch((err) => {
+          console.warn('Audio play blocked:', err);
+        });
+
+        // Fade out the hint
+        audioHint.style.opacity = '0';
+        setTimeout(() => audioHint.style.display = 'none', 600);
+
+        document.removeEventListener('click',      enableMusic);
+        document.removeEventListener('touchstart', enableMusic);
+        document.removeEventListener('keydown',    enableMusic);
+      }
+
+      document.addEventListener('click',      enableMusic, { once: true });
+      document.addEventListener('touchstart', enableMusic, { once: true });
+      document.addEventListener('keydown',    enableMusic, { once: true });
+
+      // --- Manual mute toggle ---
+      muteBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        if (!musicEnabled) {
+          // First interaction via the mute button — enable music then immediately mute
+          enableMusic();
+          // Give audio.play() a tick to start, then mute
+          setTimeout(() => {
+            audio.muted = true;
+            muteIcon.className = 'fas fa-volume-mute';
+          }, 50);
+          return;
+        }
+
+        audio.muted = !audio.muted;
+        muteIcon.className = audio.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+      });
+
+      // Belt-and-suspenders loop for video
+      video.addEventListener('ended', () => video.play());
+    })();
+  </script>
+
 </body>
 
 </html>

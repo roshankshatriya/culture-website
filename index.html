@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -44,7 +44,7 @@
         AUDIO — aud-majari.mp4 contains the music track.
         Starts muted; JS unmutes it on the first user gesture (browser policy).
       -->
-      <audio id="splash-audio" loop preload="auto">
+      <audio id="splash-audio" loop preload="auto" autoplay>
         <source src="images/home/aud-majari.mp4" type="video/mp4" />
       </audio>
 
@@ -57,86 +57,50 @@
       <!-- Content centred on top of video -->
       <div class="splash-content">
         <!-- <img src="images/home/madhura-manjari-logo.png" alt="Madhurya Manjari" class="splash-logo" /> -->
-        <h2 class="sanskrit-welcome">सुस्वागतम्</h2>
+        <h2 class="sanskrit-welcome"></h2>
         <a href="home.html" class="btn btn-primary splash-btn" id="enterBtn">
-          Welcome &nbsp;<i class="fas fa-arrow-right"></i>
+          <span>सुस्वागतम्</span>
+          <span>Welcome</span>
         </a>
       </div>
 
     </div><!-- /.splash-frame -->
 
-    <!-- Mute / Unmute toggle (fixed, bottom-right) -->
-    <button id="muteToggle" class="mute-toggle-btn" aria-label="Toggle sound">
-      <i class="fas fa-volume-mute" id="muteIcon"></i>
-    </button>
-
-    <!-- "Click to enable audio" hint — hides after first interaction -->
-    <div class="audio-hint" id="audioHint">
-      <i class="fas fa-hand-pointer"></i>
-      <span>Click anywhere to enable music</span>
-    </div>
-
   </section>
 
   <script>
     (function () {
-      const video     = document.getElementById('splash-video');
-      const audio     = document.getElementById('splash-audio');
-      const muteBtn   = document.getElementById('muteToggle');
-      const muteIcon  = document.getElementById('muteIcon');
-      const audioHint = document.getElementById('audioHint');
-
-      // --- State ---
-      let musicEnabled = false;
+      const video = document.getElementById('splash-video');
+      const audio = document.getElementById('splash-audio');
 
       // --- Start video (muted — always allowed) ---
       video.play().catch(() => {});
 
-      // --- On first user gesture anywhere: start music ---
-      function enableMusic() {
-        if (musicEnabled) return;
-        musicEnabled = true;
+      // --- Try starting audio immediately (in case autoplay is permitted) ---
+      audio.muted = false;
+      audio.volume = 0.75;
+      audio.play().catch((err) => {
+        console.log('Autoplay blocked. Audio will play on first user interaction.');
+      });
 
-        audio.muted  = false;
-        audio.volume = 0.75;
-
-        audio.play().then(() => {
-          muteIcon.className = 'fas fa-volume-up';
-        }).catch((err) => {
-          console.warn('Audio play blocked:', err);
-        });
-
-        // Fade out the hint
-        audioHint.style.opacity = '0';
-        setTimeout(() => audioHint.style.display = 'none', 600);
-
-        document.removeEventListener('click',      enableMusic);
-        document.removeEventListener('touchstart', enableMusic);
-        document.removeEventListener('keydown',    enableMusic);
-      }
-
-      document.addEventListener('click',      enableMusic, { once: true });
-      document.addEventListener('touchstart', enableMusic, { once: true });
-      document.addEventListener('keydown',    enableMusic, { once: true });
-
-      // --- Manual mute toggle ---
-      muteBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-
-        if (!musicEnabled) {
-          // First interaction via the mute button — enable music then immediately mute
-          enableMusic();
-          // Give audio.play() a tick to start, then mute
-          setTimeout(() => {
-            audio.muted = true;
-            muteIcon.className = 'fas fa-volume-mute';
-          }, 50);
-          return;
+      // --- On first user gesture anywhere: play music if blocked ---
+      function startMusic() {
+        if (audio.paused) {
+          audio.muted = false;
+          audio.volume = 0.75;
+          audio.play().catch((err) => {
+            console.warn('Audio play blocked:', err);
+          });
         }
 
-        audio.muted = !audio.muted;
-        muteIcon.className = audio.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
-      });
+        document.removeEventListener('click',      startMusic);
+        document.removeEventListener('touchstart', startMusic);
+        document.removeEventListener('keydown',    startMusic);
+      }
+
+      document.addEventListener('click',      startMusic, { once: true });
+      document.addEventListener('touchstart', startMusic, { once: true });
+      document.addEventListener('keydown',    startMusic, { once: true });
 
       // Belt-and-suspenders loop for video
       video.addEventListener('ended', () => video.play());

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Register with Sanskriti — Enrol in Indian classical dance and music programs at our academy." />
+  <title>Register Now — Sanskriti | Indian Classical Arts</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ===== REGISTER PAGE STYLES ===== */
+
+    /* --- Banner / Page Hero --- */
+    .register-hero {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--bg-tertiary);
+    }
+
+    .register-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(255, 214, 10, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(255, 107, 122, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, #0F2347 0%, #1B3A70 50%, #2D5FA3 100%);
+      z-index: 0;
+    }
+
+    .register-hero-bg::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 214, 10, 0.1);
+      box-shadow:
+        0 0 0 40px rgba(255, 214, 10, 0.04),
+        0 0 0 80px rgba(255, 214, 10, 0.03),
+        0 0 0 120px rgba(255, 214, 10, 0.02);
+    }
+
+    .register-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 130px 24px 60px;
+    }
+
+    .register-hero-content .section-tag {
+      background: rgba(255, 214, 10, 0.15);
+      border: 1px solid rgba(255, 214, 10, 0.35);
+      color: var(--brand-gold);
+    }
+
+    .register-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      margin: 16px 0 0;
+    }
+
+    .register-hero-title em {
+      font-family: var(--font-display);
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* --- Intro Text Section --- */
+    .register-intro {
+      background: var(--bg-secondary);
+      padding: 60px 0 50px;
+      text-align: center;
+    }
+
+    .register-intro-text {
+      max-width: auto;
+      margin: 0 25px;
+      padding: 0 15px;
+    }
+
+    .register-intro-text p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .register-intro-text p:last-child { margin-bottom: 0; }
+
+    .register-intro-text strong {
+      color: var(--brand-blue);
+    }
+
+    /* --- Form Section --- */
+    .register-section {
+      padding: 70px 0 100px;
+      background: var(--bg-primary);
+    }
+
+    .register-form-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow:
+        0 4px 6px rgba(27, 58, 112, 0.04),
+        0 20px 60px rgba(27, 58, 112, 0.10);
+      padding: 50px 48px;
+      border: 1px solid rgba(27, 58, 112, 0.08);
+    }
+
+    .register-form-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--brand-blue-dark);
+      margin-bottom: 6px;
+    }
+
+    .register-form-sub {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 5px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.3px;
+    }
+
+    .form-group label .required {
+      color: var(--brand-pink);
+      margin-left: 2px;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+
+    .input-wrap i {
+      position: absolute;
+      left: 16px;
+      color: var(--brand-blue-light);
+      font-size: 14px;
+      pointer-events: none;
+      z-index: 1;
+      padding: 10px;
+    }
+
+    .input-wrap input,
+    .input-wrap select {
+      width: 100%;
+      padding: 14px 16px 14px 44px;
+      /* border: 1.5px solid #E2E8F0; */
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background: #FAFBFD;
+      transition: var(--transition);
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .input-wrap input::placeholder { color: #A0AABB; }
+
+    .input-wrap input:focus,
+    .input-wrap select:focus {
+      border-color: var(--brand-blue-light);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(45, 95, 163, 0.1);
+    }
+
+    .select-wrap::after {
+      content: '\f107';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 16px;
+      color: var(--brand-blue-light);
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    .error-msg {
+      font-size: 0.8rem;
+      color: var(--brand-pink-dark);
+      min-height: 16px;
+      display: block;
+    }
+
+    .btn-register {
+      width: 100%;
+      justify-content: center;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      background: var(--blue-gradient);
+      color: white;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .btn-register:hover {
+      background: linear-gradient(135deg, #0F2347, #1B3A70);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(27, 58, 112, 0.35);
+    }
+
+    .btn-register:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-success {
+      display: none;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 22px;
+      background: rgba(95, 163, 99, 0.1);
+      border: 1px solid rgba(95, 163, 99, 0.3);
+      border-radius: var(--radius-sm);
+      color: var(--brand-green);
+      font-weight: 500;
+      margin-top: 16px;
+    }
+
+    .form-success.visible { display: flex; }
+
+    .form-success i {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .register-form-wrap {
+        padding: 36px 24px;
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">
+        <img src="images/home/madhura-manjari-logo.png" alt="Madhurya Manjari" class="nav-logo-img" />
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <li><a href="register.html" class="nav-link active nav-cta">Register Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== BANNER HERO ===== -->
+  <section class="register-hero" id="register-hero">
+    <div class="register-hero-bg"></div>
+    <div class="register-hero-content">
+      <span class="section-tag">Join Our Academy</span>
+      <h1 class="register-hero-title">
+        Begin Your<br /><em>Classical Journey</em>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ===== INTRO TEXT ===== -->
+  <section class="register-intro">
+    <div class="register-intro-text">
+      <p>Welcome to <strong>Sanskriti Classical Arts Academy</strong> — where ancient traditions meet passionate learning. Whether you are a beginner stepping into the world of classical arts or an advanced student seeking mastery, we have a program crafted just for you.</p>
+      <p>Our expert gurus bring decades of stage experience and teaching excellence, nurturing every student with personalised attention in dance, music, and performing arts.</p>
+      <p>Fill in the form below to register your interest and our team will reach out within <strong>24 hours</strong> to guide you through the enrolment process.</p>
+    </div>
+  </section>
+
+  <!-- ===== REGISTRATION FORM ===== -->
+  <section class="register-section" id="register">
+    <div class="container">
+      <div class="register-form-wrap">
+        <h2 class="register-form-title">Registration Form</h2>
+        <p class="register-form-sub">All fields marked <span style="color:var(--brand-pink);">*</span> are required.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="form-row">
+
+            <!-- Program Dropdown -->
+            <div class="form-group">
+              <label for="reg-program">Select Program <span class="required">*</span></label>
+              <div class="input-wrap select-wrap">
+                <i class="fas fa-star"></i>
+                <select id="reg-program" name="program">
+                  <option value="">-- Choose a program --</option>
+                  <optgroup label="Classical Dance">
+                    <option value="bharatanatyam">Bharatanatyam</option>
+                    <!-- <option value="kathak">Kathak</option>
+                    <option value="kuchipudi">Kuchipudi</option>
+                    <option value="mohiniyattam">Mohiniyattam</option>
+                    <option value="odissi">Odissi</option> -->
+                  </optgroup>
+                  <optgroup label="Classical Music">
+                    <option value="carnatic-vocal">Carnatic Vocal</option>
+                    <option value="hindustani-vocal">Hindustani Vocal</option>
+                    <option value="veena">Veena</option>
+                    <option value="tabla">Tabla</option>
+                    <option value="mridangam">Mridangam</option>
+                  </optgroup>
+                  <optgroup label="Special Programs">
+                    <!-- <option value="arangetram">Arangetram Training</option> -->
+                    <option value="devotional">Devotional Singing</option>
+                    <!-- <option value="performance">Book a Performance</option> -->
+                  </optgroup>
+                </select>
+              </div>
+              <span class="error-msg" id="programError"></span>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="reg-name">Full Name <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  id="reg-name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  autocomplete="name" />
+              </div>
+              <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="reg-email">Email Address <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  id="reg-email"
+                  name="email"
+                  placeholder="your@email.com"
+                  autocomplete="email" />
+              </div>
+              <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="reg-phone">Phone Number <span class="required">*</span></label>
+              <div class="input-wrap">
+                <i class="fas fa-phone"></i>
+                <input
+                  type="tel"
+                  id="reg-phone"
+                  name="phone"
+                  placeholder="+91 98765 43210"
+                  autocomplete="tel" />
+              </div>
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+
+            
+
+          </div><!-- /form-row -->
+
+          <!-- Submit -->
+          <button type="submit" class="btn-register" id="registerBtn">
+            <span>Register Now</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <!-- Success -->
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! Your registration has been received. We'll contact you within 24 hours.</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="images/home/madhura-manjari-logo.png" alt="Madhurya Manjari" class="footer-logo-img" />
+          </a>
+          <p>Preserving the ancient. Inspiring the future. India's premier classical arts institution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="register.html">Register Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="register.html">Bharatanatyam</a></li>
+            <li><a href="register.html">Kathak</a></li>
+            <li><a href="register.html">Kuchipudi</a></li>
+            <li><a href="register.html">Carnatic Vocal</a></li>
+            <li><a href="register.html">Hindustani Music</a></li>
+            <li><a href="register.html">Arangetram</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 12, Nrityagram Lane, Koramangala, Bangalore — 560 034</p>
+          <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@sanskriti-arts.in</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Sanskriti Classical Arts Academy. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+
+  <script>
+    // ===== Register Form Validation =====
+    const form = document.getElementById('registerForm');
+
+    function showError(id, msg) { document.getElementById(id).textContent = msg; }
+    function clearError(id) { document.getElementById(id).textContent = ''; }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('reg-name').value.trim();
+      if (!name) { showError('nameError', 'Please enter your full name.'); valid = false; }
+      else clearError('nameError');
+
+      const email = document.getElementById('reg-email').value.trim();
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) { showError('emailError', 'Please enter your email address.'); valid = false; }
+      else if (!emailRx.test(email)) { showError('emailError', 'Please enter a valid email address.'); valid = false; }
+      else clearError('emailError');
+
+      const phone = document.getElementById('reg-phone').value.trim();
+      const phoneRx = /^[\+]?[\d\s\-\(\)]{7,15}$/;
+      if (!phone) { showError('phoneError', 'Please enter your phone number.'); valid = false; }
+      else if (!phoneRx.test(phone)) { showError('phoneError', 'Please enter a valid phone number.'); valid = false; }
+      else clearError('phoneError');
+
+      const program = document.getElementById('reg-program').value;
+      if (!program) { showError('programError', 'Please select a program.'); valid = false; }
+      else clearError('programError');
+
+      if (valid) {
+        const btn = document.getElementById('registerBtn');
+        btn.disabled = true;
+        btn.innerHTML = '<span>Submitting…</span><i class="fas fa-spinner fa-spin"></i>';
+        setTimeout(() => {
+          document.getElementById('formSuccess').classList.add('visible');
+          form.reset();
+          btn.disabled = false;
+          btn.innerHTML = '<span>Register Now</span><i class="fas fa-arrow-right"></i>';
+        }, 1200);
+      }
+    });
+  </script>
+
+</body>
+
+</html>

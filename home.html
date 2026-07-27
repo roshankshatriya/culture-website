@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -25,11 +25,11 @@
         <img src="images/home/madhura-manjari-logo.png" alt="Madhurya Manjari" class="nav-logo-img" />
       </a>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="home.html" class="nav-link active">Kala Sanskrithi Kendra</a></li>
-        <li><a href="#" class="nav-link">Drig Drasyam</a></li>
-        <li><a href="#" class="nav-link">Sudarpana</a></li>
-        <li><a href="#" class="nav-link">Manjusha</a></li>
-        <li><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
+        <li><a href="home.html" class="nav-link active">Home</a></li>
+        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        <!-- <li><a href="#" class="nav-link">Manjusha</a></li> -->
+        <li><a href="register.html" class="nav-link nav-cta">Register Now</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
         <span></span><span></span><span></span>
@@ -43,7 +43,7 @@
     
     <div class="hero-carousel" id="heroCarousel">
       <!-- Slide 1 -->
-      <div class="carousel-slide active">
+      <div class="carousel-slide active slide-purple">
         <div class="slide-bg" style="background-image: url('images/home/carousel-1.jpg');"></div>
         <div class="hero-content">
           <span class="hero-badge">✦ Divine Rhythms ✦</span>
@@ -60,7 +60,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-slide">
+      <div class="carousel-slide slide-green">
         <div class="slide-bg" style="background-image: url('images/home/carousel-2.jpg');"></div>
         <div class="hero-content">
           <span class="hero-badge">✦ Melodic Soul ✦</span>
@@ -77,7 +77,7 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="carousel-slide">
+      <div class="carousel-slide slide-orange">
         <div class="slide-bg" style="background-image: url('images/home/carousel-3.jpg');"></div>
         <div class="hero-content">
           <span class="hero-badge">✦ Artistic Legacy ✦</span>
@@ -123,11 +123,11 @@
   </section>
 
   <!-- ===== SECTION DIVIDER ===== -->
-  <div class="divider divider-wave">
+  <!-- <div class="divider divider-wave">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
       <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-primary)" />
     </svg>
-  </div>
+  </div> -->
 
   <!-- ===== HOME ABOUT SECTION ===== -->
   <section class="home-about section" id="about">
@@ -136,16 +136,21 @@
         <div class="about-image-wrap" data-aos="fade-right">
           <div class="about-img-frame">
             <img src="images/home/home-about.jpg" alt="Guru teaching Shishya" />
-            <div class="img-badge">Est. 2001</div>
+            <div class="img-badge colorful-badge">Radhe Radhe!</div>
           </div>
-          <div class="about-img-accent"></div>
+          <!-- <div class="about-img-accent multicolor-glow"></div> -->
         </div>
         <div class="about-text" data-aos="fade-left">
           <span class="section-tag">Our Legacy</span>
           <h2 class="section-title">Preserving the <br><em>Sacred Art</em> of India</h2>
-          <p>For over two decades, Sanskriti has been a sanctuary for those seeking to immerse themselves in the profound beauty of Indian classical arts. Our journey began with a simple mission: to nurture the next generation of artists through the time-honored Guru-Shishya tradition.</p>
-          <p>We believe that dance and music are more than just performance; they are a spiritual journey and a living heritage that connects us to our roots.</p>
-          <div class="about-features">
+          <p>Every human endeavour is directed towards obtaining happiness and
+            love. It is amazing how we are distant from the very stuff that we are
+            made up of, as the Source of our own existence, the Supreme Being, is
+            pure love and joy. The only necessary and sufficient condition for us to
+            experience our own selves is to connect with our Source.</p>
+          <p>Madhurya Manjari Kala Sanskriti Kendra is an Art and Cultural centre
+              where Bhava meets Rasa! Art meets Spirituality!</p>
+          <!-- <div class="about-features">
             <div class="feature-item">
               <div class="feature-icon"><i class="fas fa-certificate"></i></div>
               <div>
@@ -160,7 +165,7 @@
                 <p>Focusing on discipline, spirituality, and artistic mastery.</p>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="hero-btns" style="justify-content: flex-start;">
             <a href="#" class="btn btn-primary">Our Full Story</a>
           </div>
@@ -180,48 +185,71 @@
         <p class="section-desc">Navigate through our curated pages — each telling a unique story of India's classical heritage.</p>
       </div>
       <div class="quick-nav-grid">
-        <a href="dance.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="0">
+        <a href="#" class="quick-nav-card card-purple" data-aos="fade-up" data-aos-delay="0">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1620913588695-f1a5e1778d88?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-om"></i></div>
           <h3>Bharatanatyam</h3>
           <p>Discover the ancient storytelling through rhythm and gesture — a tradition from the temples of South India.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="dance.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="100">
+        <a href="#" class="quick-nav-card card-orange" data-aos="fade-up" data-aos-delay="100">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1535401991746-da3d9055713e?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-shoe-prints"></i></div>
           <h3>Classical Dance</h3>
           <p>Explore the grace of Kuchipudi and the storytelling bards of North India through various classical forms.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="music.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="200">
+        <a href="#" class="quick-nav-card card-blue" data-aos="fade-up" data-aos-delay="200">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-music"></i></div>
           <h3>Classical Music</h3>
           <p>Journey through Carnatic and Hindustani traditions — soulful melodies that connect the mortal to the divine.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="gallery.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="300">
+        <a href="#" class="quick-nav-card card-red" data-aos="fade-up" data-aos-delay="300">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1619683388671-a5ffed4f4be9?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-mask"></i></div>
           <h3>Yakshagana</h3>
           <p>Witness the vibrant dance-drama of Karnataka — a grand spectacle of elaborate costumes and powerful narratives.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="dance.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="quick-nav-card card-yellow" data-aos="fade-up" data-aos-delay="400">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1535401991746-da3d9055713e?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-dharmachakra"></i></div>
           <h3>Kathak</h3>
           <p>Experience the fast pirouettes and intricate footwork of the bards from North Indian royal courts.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="dance.html" class="quick-nav-card" data-aos="fade-up" data-aos-delay="500">
+        <a href="#" class="quick-nav-card card-green" data-aos="fade-up" data-aos-delay="500">
           <div class="qn-card-bg" style="background-image: url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500&q=80');"></div>
           <div class="qn-icon"><i class="fas fa-people-group"></i></div>
           <h3>Folk Dance</h3>
           <p>Celebrate the earthy rhythms and vibrant colors of India's diverse regional folk dance traditions.</p>
           <span class="qn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCRIPTURE QUOTE SECTION ===== -->
+  <section class="scripture-quote-section section">
+    <div class="container-fluid">
+      <div class="quote-container colorful-quote" data-aos="zoom-in">
+        <div class="quote-corner top-left">✦</div>
+        <div class="quote-corner top-right">✦</div>
+        <div class="quote-corner bottom-left">✦</div>
+        <div class="quote-corner bottom-right">✦</div>
+        <div class="quote-ornament top">
+          <i class="fas fa-dharmachakra"></i>
+        </div>
+        <div class="quote-content">
+          <h2 class="sanskrit-quote">"नृत्ये स्थिते जगन्मध्ये, परमब्रह्म प्रकाशते"</h2>
+          <p class="english-translation">"In the presence of dance, the Supreme Brahman radiates throughout the universe."</p>
+          <span class="quote-source">— Natya Shastra</span>
+        </div>
+        <div class="quote-ornament bottom">
+          <i class="fas fa-dharmachakra"></i>
+        </div>
       </div>
     </div>
   </section>
@@ -237,7 +265,7 @@
       <div class="testimonial-carousel-container">
         <div class="testimonial-track">
           <!-- Testimonial 1 -->
-          <div class="testimonial-card">
+          <div class="testimonial-card card-purple">
             <div class="testi-content">
               <i class="fas fa-quote-left"></i>
               <p>"Learning Bharatanatyam at Sanskriti has been a transformative experience. It's not just about the steps; it's about finding my inner rhythm and discipline."</p>
@@ -251,7 +279,7 @@
             </div>
           </div>
           <!-- Testimonial 2 -->
-          <div class="testimonial-card">
+          <div class="testimonial-card card-green">
             <div class="testi-content">
               <i class="fas fa-quote-left"></i>
               <p>"The spiritual depth of Sitar music I discovered here is life-changing. The Gurus are incredibly patient and inspiring mentors."</p>
@@ -265,7 +293,7 @@
             </div>
           </div>
           <!-- Testimonial 3 -->
-          <div class="testimonial-card">
+          <div class="testimonial-card card-blue">
             <div class="testi-content">
               <i class="fas fa-quote-left"></i>
               <p>"Sanskriti feels like family. The support during my Arangetram was overwhelming, and I've grown so much as an artist and a person."</p>
@@ -279,7 +307,7 @@
             </div>
           </div>
           <!-- Testimonial 4 -->
-          <div class="testimonial-card">
+          <div class="testimonial-card card-orange">
             <div class="testi-content">
               <i class="fas fa-quote-left"></i>
               <p>"The Kathak classes here are exceptional. Every mudra and step is taught with such precision and love for the heritage."</p>
@@ -293,7 +321,7 @@
             </div>
           </div>
           <!-- Testimonial 5 -->
-          <div class="testimonial-card">
+          <div class="testimonial-card card-red">
             <div class="testi-content">
               <i class="fas fa-quote-left"></i>
               <p>"Discovering the nuances of Carnatic music at Sanskriti has been my soul's calling. A truly divine learning environment."</p>
@@ -331,28 +359,7 @@
     </div>
   </section> -->
 
-  <!-- ===== SCRIPTURE QUOTE SECTION ===== -->
-  <section class="scripture-quote-section section">
-    <div class="container">
-      <div class="quote-container" data-aos="zoom-in">
-        <div class="quote-corner top-left">✦</div>
-        <div class="quote-corner top-right">✦</div>
-        <div class="quote-corner bottom-left">✦</div>
-        <div class="quote-corner bottom-right">✦</div>
-        <div class="quote-ornament top">
-          <i class="fas fa-dharmachakra"></i>
-        </div>
-        <div class="quote-content">
-          <h2 class="sanskrit-quote">"नृत्ये स्थिते जगन्मध्ये, परमब्रह्म प्रकाशते"</h2>
-          <p class="english-translation">"In the presence of dance, the Supreme Brahman radiates throughout the universe."</p>
-          <span class="quote-source">— Natya Shastra</span>
-        </div>
-        <div class="quote-ornament bottom">
-          <i class="fas fa-dharmachakra"></i>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -368,7 +375,7 @@
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a> -->
             <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -376,9 +383,9 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="home.html">Kala Sanskrithi Kendra</a></li>
-            <li><a href="#">Drig Drasyam</a></li>
-            <li><a href="#">Sudarpana</a></li>
-            <li><a href="#">Manjusha</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Register</a></li>
+            <!-- <li><a href="#">Manjusha</a></li> -->
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>

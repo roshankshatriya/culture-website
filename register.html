@@ -33,9 +33,9 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(255, 214, 10, 0.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 30%, rgba(255, 107, 122, 0.15) 0%, transparent 50%),
-        linear-gradient(135deg, #0F2347 0%, #1B3A70 50%, #2D5FA3 100%);
+        radial-gradient(ellipse at 20% 50%, rgba(248, 193, 46, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(12, 57, 101, 0.12) 0%, transparent 50%),
+        var(--blue-gradient);
       z-index: 0;
     }
 
@@ -48,11 +48,11 @@
       width: 500px;
       height: 500px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 214, 10, 0.1);
+      border: 1px solid rgba(248, 193, 46, 0.1);
       box-shadow:
-        0 0 0 40px rgba(255, 214, 10, 0.04),
-        0 0 0 80px rgba(255, 214, 10, 0.03),
-        0 0 0 120px rgba(255, 214, 10, 0.02);
+        0 0 0 40px rgba(248, 193, 46, 0.04),
+        0 0 0 80px rgba(248, 193, 46, 0.03),
+        0 0 0 120px rgba(248, 193, 46, 0.02);
     }
 
     .register-hero-content {
@@ -187,7 +187,7 @@
     .input-wrap select {
       width: 100%;
       padding: 14px 16px 14px 44px;
-      /* border: 1.5px solid #E2E8F0; */
+      border: 1.5px solid var(--border-color);
       border-radius: var(--radius-sm);
       font-family: var(--font-body);
       font-size: 0.95rem;
@@ -203,9 +203,9 @@
 
     .input-wrap input:focus,
     .input-wrap select:focus {
-      border-color: var(--brand-blue-light);
+      border-color: var(--brand-blue);
       background: #ffffff;
-      box-shadow: 0 0 0 3px rgba(45, 95, 163, 0.1);
+      box-shadow: 0 0 0 3px rgba(12, 57, 101, 0.12);
     }
 
     .select-wrap::after {
@@ -247,9 +247,9 @@
     }
 
     .btn-register:hover {
-      background: linear-gradient(135deg, #0F2347, #1B3A70);
+      background: var(--brand-blue-dark);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(27, 58, 112, 0.35);
+      box-shadow: 0 8px 28px rgba(8, 42, 74, 0.35);
     }
 
     .btn-register:disabled {
@@ -297,7 +297,7 @@
       </a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="home.html" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">About Us</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
         <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         <li><a href="register.html" class="nav-link active nav-cta">Register Now</a></li>
       </ul>
@@ -455,7 +455,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="register.html">Register Now</a></li>
           </ul>
@@ -474,7 +474,7 @@
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <p><i class="fas fa-map-marker-alt"></i> 12, Nrityagram Lane, Koramangala, Bangalore — 560 034</p>
-          <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
           <p><i class="fas fa-envelope"></i> info@sanskriti-arts.in</p>
           <p><i class="fas fa-clock"></i> Mon–Sat: 7:00 AM – 8:00 PM</p>
         </div>

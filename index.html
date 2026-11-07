@@ -96,11 +96,17 @@
         document.removeEventListener('click',      startMusic);
         document.removeEventListener('touchstart', startMusic);
         document.removeEventListener('keydown',    startMusic);
+        document.removeEventListener('mousemove',  startMusic);
+        document.removeEventListener('scroll',     startMusic);
+        document.removeEventListener('wheel',      startMusic);
       }
 
       document.addEventListener('click',      startMusic, { once: true });
       document.addEventListener('touchstart', startMusic, { once: true });
       document.addEventListener('keydown',    startMusic, { once: true });
+      document.addEventListener('mousemove',  startMusic, { once: true });
+      document.addEventListener('scroll',     startMusic, { once: true });
+      document.addEventListener('wheel',      startMusic, { once: true });
 
       // Belt-and-suspenders loop for video
       video.addEventListener('ended', () => video.play());
